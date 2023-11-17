@@ -13,11 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/homey', [App\Http\Livewire\Web\Hello::class, '__invoke'])->name('homey');
+Route::get('/', [App\Http\Livewire\Web\Home::class, '__invoke'])->name('home');
