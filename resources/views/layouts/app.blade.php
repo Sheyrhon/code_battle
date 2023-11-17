@@ -41,19 +41,40 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">Home</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">Service</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">Map</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link"  href="">Book A Site</a>
+                        </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Service') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Map') }}</a>
                                 </li>
                             @endif
                         @else
+
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
